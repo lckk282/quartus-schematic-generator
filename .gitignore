@@ -1,0 +1,18 @@
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 运行时生成的文件（每台电脑不同，不入库）
+app/config.json
+app/server.log
+app/watcher.log
+*.log
+
+# 生成的工程与波形
+QuartusBatch/
+
+# 系统垃圾文件
+Thumbs.db
+desktop.ini
+.DS_Store

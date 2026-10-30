@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quartus 原理图生成器</title>
+<style>
+  :root {
+    --bg: #eef1f7;
+    --panel: #fff;
+    --line: #dde3ec;
+    --text: #16233f;
+    --muted: #6d7889;
+    --accent: #2563eb;
+    --accent-soft: #e8efff;
+    --green: #0f9d58;
+    --red: #d93025;
+    --amber: #b8860b;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: "Microsoft YaHei UI", "Segoe UI", system-ui, sans-serif;
+    font-size: 13px;
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  /* ---------- 顶栏 ---------- */
+  header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; height: 52px; flex: none;
+    background: var(--panel); border-bottom: 1px solid var(--line);
+  }
+  header h1 { font-size: 15px; margin: 0; font-weight: 600; white-space: nowrap; }
+  .tabs { display: flex; gap: 2px; background: #f2f5fa; padding: 3px; border-radius: 9px; }
+  .tabs button {
+    border: 0; background: none; font: inherit; font-size: 12px;
+    padding: 6px 14px; border-radius: 7px; cursor: pointer; color: var(--muted);
+  }
+  .tabs button.on { background: #fff; color: var(--accent); font-weight: 600;
+                    box-shadow: 0 1px 3px rgba(20,40,80,.12); }
+  header .grow { flex: 1; }
+  .badge {
+    font-size: 11px; padding: 5px 10px; border-radius: 999px;
+    background: #f2f5fa; color: var(--muted); white-space: nowrap;
+    border: 1px solid transparent;
+  }
+  .badge.ok { background: #e9f7ef; color: var(--green); }
+  .badge.warn { background: #fdf5e3; color: var(--amber); }
+  .badge.err { background: #fdecea; color: var(--red); }
+  .icon-btn {
+    border: 1px solid var(--line); background: #fff; border-radius: 8px;
+    padding: 6px 12px; font: inherit; font-size: 12px; cursor: pointer; color: #3c4658;
+    white-space: nowrap;
+  }
+  .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ---------- 主体 ---------- */
+  main {
+    flex: 1; min-height: 0;
+    display: grid; grid-template-columns: minmax(0, 1fr) 440px;
+    gap: 12px; padding: 12px 16px 14px;
+  }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 11px;
+    display: flex; flex-direction: column; min-height: 0; overflow: hidden;
+  }
+
+  /* ---------- 模板库 ---------- */
+  .toolbar {
+    display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+    padding: 10px 12px; border-bottom: 1px solid var(--line); flex: none;
+  }
+  .toolbar input[type="search"] { flex: 1; min-width: 140px; }
+  input[type="text"], input[type="search"], input[type="number"] {
+    font: inherit; color: inherit; border: 1px solid var(--line); border-radius: 8px;
+    padding: 7px 10px; background: #fbfcfe; outline: none;
+  }
+  input:focus { border-color: var(--accent); background: #fff; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip {
+    font-size: 12px; padding: 4px 11px; border-radius: 999px;
+    border: 1px solid var(--line); background: #fff; color: var(--muted);
+    cursor: pointer; user-select: none; white-space: nowrap;
+  }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  .scroll { flex: 1; min-height: 0; overflow: auto; }
+
+  /* 模板卡片网格 */
+  .gallery {
+    display: grid; gap: 10px; padding: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+  }
+  .card {
+    text-align: left; border: 1px solid var(--line); background: #fbfcfe;
+    border-radius: 10px; padding: 10px 12px; cursor: pointer;
+    font: inherit; color: var(--text); position: relative;
+    transition: border-color .12s, box-shadow .12s, transform .12s;
+  }
+  .card:hover { border-color: #9fbcf7; box-shadow: 0 2px 10px rgba(37,99,235,.10); }
+  .card.on { border-color: var(--accent); background: var(--accent-soft);
+             box-shadow: 0 0 0 1px var(--accent) inset; }
+  .card .tag {
+    display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 5px;
+    background: #eef2f9; color: var(--muted); margin-bottom: 6px;
+  }
+  .card.on .tag { background: #d5e2ff; color: var(--accent); }
+  .card b { display: block; font-size: 13.5px; font-weight: 600; line-height: 1.4; }
+  .card small { display: block; color: var(--muted); font-size: 11px;
+                margin-top: 4px; line-height: 1.55; }
+  .card .parts {
+    display: block; margin-top: 6px; font-size: 10.5px; color: #8b95a6;
+    font-family: Consolas, monospace;
+  }
+  .group-title {
+    grid-column: 1 / -1; font-size: 11.5px; font-weight: 600; color: var(--muted);
+    letter-spacing: .06em; margin: 6px 0 -2px; padding-left: 2px;
+  }
+  .group-title:first-child { margin-top: 0; }
+
+  /* 元件库 */
+  .rows { padding: 4px 10px 12px; }
+  .row {
+    display: flex; align-items: center; gap: 8px; padding: 7px 8px;
+    border-radius: 8px; border-bottom: 1px solid #f1f4f9;
+  }
+  .row:hover { background: #f7f9fd; }
+  .row .name { font-weight: 600; font-size: 13px; cursor: pointer; flex: 1;
+               min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .lib { font-size: 11px; color: var(--muted); margin-left: 6px; font-weight: 400; }
+  .mini {
+    font-size: 12px; border: 1px solid var(--line); background: #fff;
+    border-radius: 6px; padding: 3px 8px; cursor: pointer; color: #3c4658;
+  }
+  .mini:hover { border-color: var(--accent); color: var(--accent); }
+  .mini.one { border-color: var(--accent-soft); background: var(--accent-soft); color: var(--accent); }
+  .mini.minus { border-color: #f6d5d2; background: #fdecea; color: var(--red); font-size: 11px; }
+
+  /* ---------- 右侧操作栏 ---------- */
+  .side { gap: 0; }
+  .side .sec { padding: 12px 14px; border-bottom: 1px solid var(--line); flex: none; }
+  .side .sec h3 {
+    font-size: 11.5px; font-weight: 600; color: var(--muted);
+    letter-spacing: .05em; margin: 0 0 8px;
+  }
+  .picked { font-size: 13.5px; font-weight: 600; line-height: 1.45; }
+  .picked.empty { color: var(--muted); font-weight: 400; font-size: 12px; }
+  .picked-desc { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin-top: 5px; }
+  .field { display: flex; gap: 8px; align-items: center; font-size: 12px; margin-bottom: 8px; }
+  .field:last-child { margin-bottom: 0; }
+  .field > span { color: var(--muted); width: 52px; flex: none; }
+  .field input { flex: 1; min-width: 0; font-size: 12px; padding: 6px 9px; }
+  .checks { display: flex; flex-direction: column; gap: 6px; margin-top: 9px; }
+  .check { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #3c4658; cursor: pointer; }
+  .check input { accent-color: var(--accent); }
+  .btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  .primary {
+    flex: 1 1 150px; border: 0; border-radius: 9px; background: var(--accent); color: #fff;
+    font: inherit; font-size: 13px; font-weight: 600; padding: 11px; cursor: pointer;
+  }
+  .primary:hover:not(:disabled) { background: #1d4fd8; }
+  .primary:disabled { background: #b9c7e6; cursor: default; }
+  .primary.go { background: var(--green); }
+  .primary.go:hover:not(:disabled) { background: #0b7f46; }
+  .primary.go:disabled { background: #bcd9c9; }
+  .ghost {
+    border: 1px solid var(--line); background: #fff; border-radius: 9px;
+    padding: 10px 12px; font: inherit; font-size: 12px; cursor: pointer; color: #4a5568;
+    white-space: nowrap;
+  }
+  .ghost:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+  .ghost:disabled { color: #b6bdc9; cursor: default; }
+  .status { font-size: 12px; line-height: 1.6; word-break: break-all; min-height: 0; }
+  .status.ok { color: var(--green); }
+  .status.err { color: var(--red); }
+  .status.info { color: var(--muted); }
+  .status a { color: var(--accent); cursor: pointer; text-decoration: underline; }
+
+  /* 预览区 */
+  .preview-wrap { flex: 1; min-height: 200px; display: flex; flex-direction: column;
+                  background: #fafbfd; }
+  .preview-head {
+    display: flex; align-items: center; gap: 8px; padding: 9px 14px;
+    border-bottom: 1px solid var(--line); flex: none;
+  }
+  .preview-head h3 { margin: 0; flex: 1; }
+  .preview {
+    flex: 1; min-height: 0; overflow: auto; padding: 8px;
+    display: flex; align-items: flex-start; justify-content: center;
+  }
+  .preview svg { display: block; max-width: 100%; height: auto; }
+  /* 波形图很宽，别压缩，改为横向滚动 */
+  .preview.wave { justify-content: flex-start; }
+  .preview.wave svg { max-width: none; flex: none; }
+  .preview .ph { color: var(--muted); font-size: 12px; text-align: center;
+                 padding: 46px 20px; line-height: 1.9; }
+  .spinner {
+    width: 14px; height: 14px; border: 2px solid #cfd8e8; border-top-color: var(--accent);
+    border-radius: 50%; animation: spin .7s linear infinite; display: inline-block;
+    vertical-align: -2px; margin-right: 5px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  /* 全屏预览 */
+  .fullscreen {
+    position: fixed; inset: 0; z-index: 50; background: #fff;
+    display: none; flex-direction: column;
+  }
+  .fullscreen.on { display: flex; }
+  .fullscreen .bar { display: flex; gap: 8px; align-items: center;
+                     padding: 10px 16px; border-bottom: 1px solid var(--line); }
+  .fullscreen .body { flex: 1; overflow: auto; padding: 16px; }
+
+  /* 生成结果浮层 */
+  .toast {
+    position: fixed; left: 50%; bottom: 26px; transform: translate(-50%, 20px);
+    background: #16233f; color: #fff; border-radius: 10px; padding: 11px 18px;
+    box-shadow: 0 8px 26px rgba(16,30,60,.26); z-index: 60;
+    opacity: 0; pointer-events: none; transition: opacity .18s, transform .18s;
+    max-width: 620px; text-align: center;
+  }
+  .toast.on { opacity: 1; transform: translate(-50%, 0); }
+  .toast.err { background: var(--red); }
+  .toast b { display: block; font-size: 13px; font-weight: 600; }
+  .toast span { display: block; font-size: 11.5px; opacity: .8; margin-top: 3px;
+                word-break: break-all; }
+
+  /* 折叠的输出设置 */
+  details.sec { padding: 0; }
+  details.sec > summary {
+    list-style: none; cursor: pointer; padding: 11px 14px;
+    font-size: 11.5px; font-weight: 600; color: var(--muted); letter-spacing: .05em;
+    display: flex; align-items: center; gap: 6px;
+  }
+  details.sec > summary::-webkit-details-marker { display: none; }
+  details.sec > summary::before { content: "▸"; font-size: 10px; }
+  details.sec[open] > summary::before { content: "▾"; }
+  details.sec > .inner { padding: 0 14px 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Quartus 原理图生成器</h1>
+  <div class="tabs">
+    <button id="tab-tpl" class="on">电路模板</button>
+    <button id="tab-lib">元件库</button>
+  </div>
+  <span class="grow"></span>
+  <span class="badge" id="health">正在检查环境…</span>
+  <button class="icon-btn" id="open-dir">打开输出文件夹</button>
+</header>
+
+<main>
+  <!-- ============ 左：模板库 ============ -->
+  <section class="panel" id="pane-tpl">
+    <div class="toolbar">
+      <input id="tpl-search" type="search" placeholder="搜索模板名，例如 计数器、译码器、触发器">
+      <div class="chips" id="tpl-cats"></div>
+    </div>
+    <div class="scroll" id="tpl-scroll">
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- ============ 左：元件库 ============ -->
+  <section class="panel" id="pane-lib" style="display:none">
+    <div class="toolbar">
+      <input id="lib-search" type="search" placeholder="搜索型号，例如 7490、7400、dff、and2（回车加入 1 个）">
+    </div>
+    <div class="toolbar" style="padding-top:0;border-bottom:1px solid var(--line)">
+      <div class="chips" id="lib-cats"></div>
+      <button class="mini" id="lib-clear" title="清空已选元件">清空已选</button>
+    </div>
+    <div class="scroll">
+      <div class="rows" id="lib-rows"></div>
+    </div>
+  </section>
+
+  <!-- ============ 右：操作 + 预览 ============ -->
+  <aside class="panel side">
+    <div class="sec">
+      <h3>当前选择</h3>
+      <div class="picked empty" id="picked">还没有选模板 —— 在左边点一张卡片</div>
+      <div class="picked-desc" id="picked-desc"></div>
+    </div>
+
+    <details class="sec" id="setup">
+      <summary>输出设置</summary>
+      <div class="inner">
+        <div class="field"><span>目录</span><input id="dir" type="text" spellcheck="false"></div>
+        <div class="field"><span>文件名</span><input id="fname" type="text" spellcheck="false"></div>
+        <div class="checks">
+          <label class="check"><input type="checkbox" id="make-proj" checked>
+            同时生成 Quartus 工程（.qpf / .qsf，可直接编译）</label>
+          <label class="check"><input type="checkbox" id="auto-open" checked>
+            生成后自动在 Quartus 里打开</label>
+        </div>
+      </div>
+    </details>
+
+    <div class="sec">
+      <div class="btns">
+        <button class="primary go" id="btn-gen">生成原理图</button>
+        <button class="ghost" id="btn-wave">导出波形图</button>
+        <button class="ghost" id="btn-preview">刷新预览</button>
+      </div>
+      <div class="status info" id="status" style="margin-top:8px"></div>
+    </div>
+
+    <div class="preview-wrap">
+      <div class="preview-head">
+        <h3 id="pv-title">原理图预览</h3>
+        <button class="icon-btn" id="btn-zoom" style="padding:4px 10px">放大</button>
+      </div>
+      <div class="preview" id="preview">
+        <div class="ph">点左侧任意模板卡片<br>这里会立刻画出生成好的原理图</div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<div class="fullscreen" id="fs">
+  <div class="bar">
+    <b style="flex:1" id="fs-title">原理图预览</b>
+    <button class="icon-btn" id="fs-close">关闭</button>
+  </div>
+  <div class="body" id="fs-body"></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let symbols = [];
+let tplList = [];
+let tplId = "";
+let tab = "tpl";
+let tplCat = "全部";
+let libCat = "全部";
+let cart = new Map();          // name -> count（元件库模式）
+let lastSvg = "";
+let busy = false;
+let health = null;
+
+const GROUP_ORDER = ["组合逻辑", "计数器", "时序逻辑", "综合系统"];
+const MODE_HINT = {
+  tpl: "选一张模板卡片 → 右侧立刻预览 → 点「生成原理图」。",
+  lib: "点「＋1／×2」挑若干元件，右下角会统计数量 → 点「生成原理图」只摆放、不连线。"
+};
+
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+function stamp() {
+  const d = new Date(), p = n => String(n).padStart(2, "0");
+  return `${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}_${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`;
+}
+function setStatus(msg, cls) {
+  const el = $("status");
+  el.innerHTML = msg || "";
+  el.className = "status " + (cls || "info");
+}
+
+async function boot() {
+  const [symRes, cfgRes, tplRes] = await Promise.all([
+    fetch("/api/symbols").then(r => r.json()),
+    fetch("/api/config").then(r => r.json()),
+    fetch("/api/templates").then(r => r.json())
+  ]);
+  symbols = symRes.items || [];
+  tplList = tplRes.items || [];
+  $("dir").value = cfgRes.default_dir;
+  $("fname").value = "sch_" + stamp();
+  renderTplCats();
+  renderGallery();
+  renderLibCats();
+  renderLibRows();
+  syncSide();
+  checkHealth();
+}
+
+/* ---------------- 环境自检 ---------------- */
+async function checkHealth() {
+  const el = $("health");
+  try {
+    health = await fetch("/api/health").then(r => r.json());
+  } catch (e) {
+    el.textContent = "服务未响应";
+    el.className = "badge err";
+    return;
+  }
+  const bad = health.checks.filter(c => !c.ok);
+  if (!bad.length) {
+    el.textContent = "环境正常";
+    el.className = "badge ok";
+  } else {
+    el.textContent = bad.length + " 项异常";
+    el.className = "badge err";
+  }
+  el.title = health.checks.map(c => (c.ok ? "✓ " : "✗ ") + c.name +
+              (c.detail ? "：" + c.detail : "")).join("\n");
+}
+
+/* ---------------- 模板库 ---------------- */
+const TPL_CATS = ["全部"].concat(GROUP_ORDER);
+
+function renderTplCats() {
+  $("tpl-cats").innerHTML = TPL_CATS.map(c => {
+    const n = c === "全部" ? tplList.length : tplList.filter(t => t.group === c).length;
+    if (!n) return "";
+    return `<span class="chip ${tplCat === c ? "on" : ""}" data-cat="${esc(c)}">${esc(c)} ${n}</span>`;
+  }).join("");
+  $("tpl-cats").querySelectorAll(".chip").forEach(el => {
+    el.onclick = () => { tplCat = el.dataset.cat; renderTplCats(); renderGallery(); };
+  });
+}
+
+function visibleTpls() {
+  const q = $("tpl-search").value.trim().toLowerCase();
+  return tplList.filter(t => {
+    if (tplCat !== "全部" && t.group !== tplCat) return false;
+    if (!q) return true;
+    return (t.name + " " + t.desc + " " + t.id).toLowerCase().includes(q);
+  });
+}
+
+function renderGallery() {
+  const rows = visibleTpls();
+  if (!rows.length) {
+    $("gallery").innerHTML = `<div class="ph" style="grid-column:1/-1">没有匹配的模板（试试清空搜索）</div>`;
+    return;
+  }
+  let html = "";
+  if (tplCat === "全部") {
+    for (const g of GROUP_ORDER) {
+      const group = rows.filter(t => t.group === g);
+      if (!group.length) continue;
+      html += `<div class="group-title">${esc(g)}</div>`;
+      html += group.map(card).join("");
+    }
+    const rest = rows.filter(t => GROUP_ORDER.indexOf(t.group) < 0);
+    if (rest.length) {
+      html += `<div class="group-title">其它</div>` + rest.map(card).join("");
+    }
+  } else {
+    html = rows.map(card).join("");
+  }
+  $("gallery").innerHTML = html;
+  $("gallery").querySelectorAll(".card").forEach(el => {
+    el.onclick = () => pickTemplate(el.dataset.tpl);
+  });
+}
+
+function card(t) {
+  const parts = (t.items || []).map(i => `${i.name}×${i.count}`).join(" + ");
+  return `<button class="card ${tplId === t.id ? "on" : ""}" data-tpl="${esc(t.id)}">
+    <span class="tag">${esc(t.group || "其它")}</span>
+    <b>${esc(t.name)}</b>
+    <small>${esc(t.desc)}</small>
+    <span class="parts">${esc(parts)}</span>
+  </button>`;
+}
+
+function pickTemplate(id) {
+  tplId = id;
+  const t = tplList.find(x => x.id === id);
+  $("fname").value = "sch_" + id + "_" + stamp();
+  renderGallery();
+  syncSide();
+  if (t) loadPreview(t.id);
+}
+
+/* ---------------- 元件库 ---------------- */
+function libCounts() {
+  const m = new Map();
+  symbols.forEach(s => m.set(s.cat, (m.get(s.cat) || 0) + 1));
+  return m;
+}
+
+function renderLibCats() {
+  const counts = libCounts();
+  let html = `<span class="chip ${libCat === "全部" ? "on" : ""}" data-cat="全部">全部 ${symbols.length}</span>`;
+  for (const [name, n] of counts) {
+    html += `<span class="chip ${libCat === name ? "on" : ""}" data-cat="${esc(name)}">${esc(name)} ${n}</span>`;
+  }
+  $("lib-cats").innerHTML = html;
+  $("lib-cats").querySelectorAll(".chip").forEach(el => {
+    el.onclick = () => { libCat = el.dataset.cat; renderLibCats(); renderLibRows(); };
+  });
+}
+
+function visibleLib() {
+  const q = $("lib-search").value.trim().toLowerCase();
+  return symbols.filter(s => {
+    if (libCat !== "全部" && s.cat !== libCat) return false;
+    if (!q) return true;
+    return s.name.toLowerCase().includes(q) || s.lib.toLowerCase().includes(q);
+  });
+}
+
+function renderLibRows() {
+  const rows = visibleLib();
+  if (!rows.length) {
+    $("lib-rows").innerHTML = `<div class="ph">没有匹配的元件</div>`;
+    return;
+  }
+  $("lib-rows").innerHTML = rows.map(s => {
+    const n = cart.get(s.name) || 0;
+    return `<div class="row" data-name="${esc(s.name)}">
+      <span class="name">${esc(s.name)}<span class="lib">${esc(s.lib)}</span></span>
+      ${n ? `<button class="mini minus" data-op="sub" title="减少 1 个">－${n}</button>` : ""}
+      <button class="mini one" data-op="add">＋1</button>
+      <button class="mini" data-op="set" data-n="2">×2</button>
+      <button class="mini" data-op="set" data-n="3">×3</button>
+      <button class="mini" data-op="set" data-n="5">×5</button>
+    </div>`;
+  }).join("");
+  $("lib-rows").querySelectorAll(".row").forEach(row => {
+    const name = row.dataset.name;
+    row.querySelector(".name").onclick = () => add(name, 1, true);
+    row.querySelectorAll(".mini").forEach(btn => {
+      btn.onclick = () => {
+        const op = btn.dataset.op;
+        if (op === "add") add(name, 1, true);
+        else if (op === "sub") add(name, -1, true);
+        else add(name, Number(btn.dataset.n), false);
+      };
+    });
+  });
+}
+
+function add(name, n, increment) {
+  const cur = cart.get(name) || 0;
+  let next;
+  if (increment) next = cur + n;
+  else next = n;
+  next = Math.min(Math.max(next, 0), 500);
+  if (next <= 0) cart.delete(name);
+  else cart.set(name, next);
+  renderLibRows();
+  syncSide();
+}
+
+/* ---------------- 右侧同步 ---------------- */
+function syncSide() {
+  const picked = $("picked");
+  const desc = $("picked-desc");
+  if (tab === "tpl") {
+    const t = tplList.find(x => x.id === tplId);
+    if (t) {
+      picked.className = "picked";
+      picked.textContent = t.name;
+      const parts = (t.items || []).map(i => `${i.name}×${i.count}`).join(" + ");
+      desc.innerHTML = `${esc(t.desc)}<br><span style="color:#8b95a6;font-family:Consolas,monospace">${esc(parts)}</span>`;
+      $("btn-gen").disabled = false;
+    } else {
+      picked.className = "picked empty";
+      picked.textContent = "还没有选模板 —— 在左边点一张卡片";
+      desc.textContent = MODE_HINT.tpl;
+      $("btn-gen").disabled = true;
+    }
+  } else {
+    const kinds = cart.size;
+    const total = Array.from(cart.values()).reduce((a, b) => a + b, 0);
+    picked.className = kinds ? "picked" : "picked empty";
+    picked.textContent = kinds ? `已选 ${kinds} 种 / 共 ${total} 个元件` : "还没有选元件";
+    desc.textContent = MODE_HINT.lib;
+    $("btn-gen").disabled = total === 0;
+  }
+}
+
+/* ---------------- 预览 ---------------- */
+async function loadPreview(templateId, silent) {
+  if (busy) return;
+  busy = true;
+  const box = $("preview");
+  const label = templateId
+    ? (tplList.find(t => t.id === templateId) || {}).name || templateId
+    : "元件摆放";
+  box.innerHTML = `<div class="ph"><span class="spinner"></span>正在生成预览…</div>`;
+  try {
+    const body = { open: false, make_project: false };
+    if (templateId) body.template = templateId;
+    else body.items = Array.from(cart.entries()).map(([name, count]) => ({ name, count }));
+    const res = await fetch("/api/preview", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (!data.ok) {
+      box.innerHTML = `<div class="ph" style="color:var(--red)">${esc(data.error || "预览失败")}</div>`;
+      lastSvg = "";
+      return;
+    }
+    lastSvg = data.svg;
+    box.innerHTML = data.svg;
+    box.classList.remove("wave");
+    $("pv-title").textContent = "原理图预览";
+    $("fs-title").textContent = label + " — 原理图预览";
+    $("fs-body").innerHTML = data.svg;
+    if (!silent) setStatus(`预览已更新（${data.count} 个元件）`, "info");
+  } catch (err) {
+    box.innerHTML = `<div class="ph" style="color:var(--red)">预览请求失败：${esc(err)}</div>`;
+  } finally {
+    busy = false;
+  }
+}
+
+/* ---------------- 生成 ---------------- */
+async function generate() {
+  const useTpl = tab === "tpl";
+  if (useTpl && !tplId) { setStatus("请先在左边选一张模板卡片", "err"); return; }
+  if (!useTpl && !cart.size) { setStatus("请先在元件库里挑几个元件", "err"); return; }
+
+  const dir = $("dir").value.trim().replace(/[\\\/]+$/, "");
+  const raw = $("fname").value.trim();
+  const stem = raw.replace(/\.bdf$/i, "") || ("sch_" + stamp());
+  const target = dir ? dir + "\\" + stem + ".bdf" : "";
+
+  $("btn-gen").disabled = true;
+  setStatus(`<span class="spinner"></span>正在生成${target ? "：" + esc(stem) + ".bdf" : "…"}`, "info");
+  try {
+    const body = {
+      path: target,
+      open: $("auto-open").checked,
+      make_project: $("make-proj").checked
+    };
+    if (useTpl) body.template = tplId;
+    else body.items = Array.from(cart.entries()).map(([name, count]) => ({ name, count }));
+
+    const res = await fetch("/api/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (!data.ok) { setStatus(esc(data.error || "生成失败"), "err"); return; }
+
+    // 先刷新预览（静默，不覆盖状态栏），再写最终结果，避免提示被预览文案盖掉
+    await loadPreview(useTpl ? tplId : null, true);
+    $("fname").value = "sch_" + (useTpl ? tplId : "batch") + "_" + stamp();
+
+    let msg = `已生成 <b>${esc(data.entity)}.bdf</b>（${data.count} 个元件）`;
+    if (data.files && data.files.length > 1) {
+      msg += `<br>已附工程文件：` +
+        data.files.filter(f => !f.toLowerCase().endsWith(".bdf"))
+          .map(f => esc(f.split("\\").pop())).join("、");
+    }
+    if (data.opened) msg += `<br>已在 Quartus 中打开`;
+    else if (data.note) msg += `<br><span style="color:var(--amber)">${esc(data.note)}</span>`;
+    msg += `<br><a data-act="reveal">在资源管理器中显示</a>`;
+    setStatus(msg, data.opened ? "ok" : "ok");
+    const link = document.querySelector("#status a[data-act=reveal]");
+    if (link) link.onclick = () => reveal(data.path);
+    toast(`已生成 ${data.entity}.bdf`, data.opened ? "已在 Quartus 中打开" : dir);
+  } catch (err) {
+    setStatus("请求失败：" + esc(err), "err");
+    toast("生成失败", String(err), true);
+  } finally {
+    syncSide();
+  }
+}
+
+/* 顶部浮层提示：生成成功/失败都必须看得见 */
+let toastTimer = null;
+function toast(title, sub, isErr) {
+  let el = $("toast");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "toast";
+    document.body.appendChild(el);
+  }
+  el.className = "toast" + (isErr ? " err" : "");
+  el.innerHTML = `<b>${esc(title)}</b><span>${esc(sub || "")}</span>`;
+  el.classList.add("on");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("on"), 3200);
+}
+
+async function reveal(path) {
+  try {
+    await fetch("/api/reveal", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ path })
+    });
+  } catch (e) { /* 忽略 */ }
+}
+
+/* ---------------- 事件绑定 ---------------- */
+$("tab-tpl").onclick = () => switchTab("tpl");
+$("tab-lib").onclick = () => switchTab("lib");
+function switchTab(t) {
+  tab = t;
+  $("tab-tpl").classList.toggle("on", t === "tpl");
+  $("tab-lib").classList.toggle("on", t === "lib");
+  $("pane-tpl").style.display = t === "tpl" ? "" : "none";
+  $("pane-lib").style.display = t === "lib" ? "" : "none";
+  syncSide();
+}
+
+$("tpl-search").addEventListener("input", renderGallery);
+$("lib-search").addEventListener("input", renderLibRows);
+$("lib-clear").onclick = () => {
+  cart.clear(); renderLibRows(); syncSide();
+  setStatus("已清空已选元件", "info");
+};
+$("lib-search").addEventListener("keydown", e => {
+  if (e.key !== "Enter") return;
+  const rows = visibleLib();
+  if (rows.length) add(rows[0].name, 1, true);
+});
+$("btn-gen").onclick = generate;
+/* ---------------- 波形图 ---------------- */
+async function exportWave() {
+  if (tab !== "tpl" || !tplId) {
+    setStatus("波形图只对内置模板有效，请先在左边选一张模板卡片", "err");
+    return;
+  }
+  const dir = $("dir").value.trim().replace(/[\\\/]+$/, "");
+  setStatus(`<span class="spinner"></span>正在生成并导出波形图…`, "info");
+  try {
+    const res = await fetch("/api/waveform", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ template: tplId, save: true, dir })
+    });
+    const data = await res.json();
+    if (!data.ok) { setStatus(esc(data.error || "波形生成失败"), "err"); return; }
+
+    lastSvg = data.svg;
+    $("preview").innerHTML = data.svg;
+    $("preview").classList.add("wave");
+    $("pv-title").textContent = "波形图";
+    $("fs-title").textContent = data.title + " — 波形图";
+    $("fs-body").innerHTML = data.svg;
+
+    const name = (data.path || "").split("\\").pop();
+    const csv = (data.files || []).filter(f => f.toLowerCase().endsWith(".csv"))
+      .map(f => f.split("\\").pop()).join("、");
+    setStatus(`已导出波形图 <b>${esc(name)}</b>` +
+      (csv ? `（数据表 ${esc(csv)}）` : "") +
+      `<br>${data.slots} 拍 / ${data.signals} 路信号，可直接用于实验报告` +
+      `<br><a data-act="reveal">在资源管理器中显示</a>`, "ok");
+    const link = document.querySelector("#status a[data-act=reveal]");
+    if (link) link.onclick = () => reveal(data.path);
+    toast("已导出波形图", name, false);
+  } catch (err) {
+    setStatus("波形请求失败：" + esc(err), "err");
+  }
+}
+$("btn-wave").onclick = exportWave;
+$("btn-preview").onclick = () => {
+  if (tab === "tpl" && tplId) loadPreview(tplId);
+  else if (cart.size) loadPreview(null);
+  else setStatus("先选模板或元件，才有东西可预览", "err");
+};
+$("btn-zoom").onclick = () => {
+  if (!lastSvg) { setStatus("还没有可放大的预览", "err"); return; }
+  $("fs").classList.add("on");
+};
+$("fs-close").onclick = () => $("fs").classList.remove("on");
+$("open-dir").onclick = async () => {
+  const dir = $("dir").value.trim().replace(/[\\\/]+$/, "");
+  try {
+    const r = await fetch("/api/opendir", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ dir })
+    });
+    const d = await r.json();
+    if (!d.ok) setStatus(esc(d.error), "err");
+  } catch (e) { setStatus("打开文件夹失败", "err"); }
+};
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") $("fs").classList.remove("on");
+});
+
+boot();
+</script>
+</body>
+</html>

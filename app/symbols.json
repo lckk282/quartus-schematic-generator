@@ -1,0 +1,3845 @@
+{
+ "lib_root": "C:\\altera\\91\\quartus\\libraries",
+ "items": [
+  {
+   "name": "161mux",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 368,
+   "rel": "others/maxplus2/161mux.bsf"
+  },
+  {
+   "name": "16cudslr",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 288,
+   "rel": "others/maxplus2/16cudslr.bsf"
+  },
+  {
+   "name": "16cudsrb",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 144,
+   "h": 144,
+   "rel": "others/maxplus2/16cudsrb.bsf"
+  },
+  {
+   "name": "16dmux",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 288,
+   "rel": "others/maxplus2/16dmux.bsf"
+  },
+  {
+   "name": "16ndmux",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 288,
+   "rel": "others/maxplus2/16ndmux.bsf"
+  },
+  {
+   "name": "1a2nor2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/1a2nor2.bsf"
+  },
+  {
+   "name": "21mux",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 80,
+   "rel": "others/maxplus2/21mux.bsf"
+  },
+  {
+   "name": "2a2nor2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/2a2nor2.bsf"
+  },
+  {
+   "name": "2or2na2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/2or2na2.bsf"
+  },
+  {
+   "name": "2x8mux",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 160,
+   "h": 80,
+   "rel": "others/maxplus2/2x8mux.bsf"
+  },
+  {
+   "name": "4a2nor4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/4a2nor4.bsf"
+  },
+  {
+   "name": "4count",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/4count.bsf"
+  },
+  {
+   "name": "7400",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/7400.bsf"
+  },
+  {
+   "name": "7402",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/7402.bsf"
+  },
+  {
+   "name": "7404",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 48,
+   "h": 32,
+   "rel": "others/maxplus2/7404.bsf"
+  },
+  {
+   "name": "7408",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/7408.bsf"
+  },
+  {
+   "name": "7410",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/7410.bsf"
+  },
+  {
+   "name": "74107",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74107.bsf"
+  },
+  {
+   "name": "74107a",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74107a.bsf"
+  },
+  {
+   "name": "74107o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 96,
+   "rel": "others/maxplus2/74107o.bsf"
+  },
+  {
+   "name": "74109",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74109.bsf"
+  },
+  {
+   "name": "74109o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 112,
+   "rel": "others/maxplus2/74109o.bsf"
+  },
+  {
+   "name": "7411",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/7411.bsf"
+  },
+  {
+   "name": "74112",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74112.bsf"
+  },
+  {
+   "name": "74112o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 112,
+   "rel": "others/maxplus2/74112o.bsf"
+  },
+  {
+   "name": "74113",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74113.bsf"
+  },
+  {
+   "name": "74113o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/74113o.bsf"
+  },
+  {
+   "name": "74114",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74114.bsf"
+  },
+  {
+   "name": "74116",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 256,
+   "rel": "others/maxplus2/74116.bsf"
+  },
+  {
+   "name": "74116o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 144,
+   "rel": "others/maxplus2/74116o.bsf"
+  },
+  {
+   "name": "74133",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 120,
+   "rel": "others/maxplus2/74133.bsf"
+  },
+  {
+   "name": "74134",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 224,
+   "rel": "others/maxplus2/74134.bsf"
+  },
+  {
+   "name": "74135",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74135.bsf"
+  },
+  {
+   "name": "74135o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/74135o.bsf"
+  },
+  {
+   "name": "74137",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74137.bsf"
+  },
+  {
+   "name": "74138",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74138.bsf"
+  },
+  {
+   "name": "74139",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74139.bsf"
+  },
+  {
+   "name": "74139m",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/74139m.bsf"
+  },
+  {
+   "name": "74139o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/74139o.bsf"
+  },
+  {
+   "name": "74143",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 256,
+   "rel": "others/maxplus2/74143.bsf"
+  },
+  {
+   "name": "74145",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74145.bsf"
+  },
+  {
+   "name": "74147",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74147.bsf"
+  },
+  {
+   "name": "74148",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74148.bsf"
+  },
+  {
+   "name": "74151",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 224,
+   "rel": "others/maxplus2/74151.bsf"
+  },
+  {
+   "name": "74151b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 112,
+   "rel": "others/maxplus2/74151b.bsf"
+  },
+  {
+   "name": "74153",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 224,
+   "rel": "others/maxplus2/74153.bsf"
+  },
+  {
+   "name": "74153m",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/74153m.bsf"
+  },
+  {
+   "name": "74153o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/74153o.bsf"
+  },
+  {
+   "name": "74154",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 288,
+   "rel": "others/maxplus2/74154.bsf"
+  },
+  {
+   "name": "74155",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74155.bsf"
+  },
+  {
+   "name": "74155o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 96,
+   "rel": "others/maxplus2/74155o.bsf"
+  },
+  {
+   "name": "74156",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74156.bsf"
+  },
+  {
+   "name": "74157",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74157.bsf"
+  },
+  {
+   "name": "74157m",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/74157m.bsf"
+  },
+  {
+   "name": "74157o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/74157o.bsf"
+  },
+  {
+   "name": "74158",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74158.bsf"
+  },
+  {
+   "name": "74158o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/74158o.bsf"
+  },
+  {
+   "name": "74160",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 184,
+   "rel": "others/maxplus2/74160.bsf"
+  },
+  {
+   "name": "74161",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 184,
+   "rel": "others/maxplus2/74161.bsf"
+  },
+  {
+   "name": "74162",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 184,
+   "rel": "others/maxplus2/74162.bsf"
+  },
+  {
+   "name": "74163",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 184,
+   "rel": "others/maxplus2/74163.bsf"
+  },
+  {
+   "name": "74164",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74164.bsf"
+  },
+  {
+   "name": "74164b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 96,
+   "rel": "others/maxplus2/74164b.bsf"
+  },
+  {
+   "name": "74165",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 224,
+   "rel": "others/maxplus2/74165.bsf"
+  },
+  {
+   "name": "74165b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 112,
+   "rel": "others/maxplus2/74165b.bsf"
+  },
+  {
+   "name": "74166",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 240,
+   "rel": "others/maxplus2/74166.bsf"
+  },
+  {
+   "name": "74167",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 128,
+   "h": 192,
+   "rel": "others/maxplus2/74167.bsf"
+  },
+  {
+   "name": "74168",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74168.bsf"
+  },
+  {
+   "name": "74169",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74169.bsf"
+  },
+  {
+   "name": "74171",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74171.bsf"
+  },
+  {
+   "name": "74172",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 320,
+   "rel": "others/maxplus2/74172.bsf"
+  },
+  {
+   "name": "74173",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74173.bsf"
+  },
+  {
+   "name": "74174",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74174.bsf"
+  },
+  {
+   "name": "74174b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 144,
+   "h": 80,
+   "rel": "others/maxplus2/74174b.bsf"
+  },
+  {
+   "name": "74174m",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/74174m.bsf"
+  },
+  {
+   "name": "74175",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74175.bsf"
+  },
+  {
+   "name": "74176",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74176.bsf"
+  },
+  {
+   "name": "74177",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74177.bsf"
+  },
+  {
+   "name": "74178",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74178.bsf"
+  },
+  {
+   "name": "74179",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74179.bsf"
+  },
+  {
+   "name": "74180",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74180.bsf"
+  },
+  {
+   "name": "74180b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 80,
+   "rel": "others/maxplus2/74180b.bsf"
+  },
+  {
+   "name": "74181",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 256,
+   "rel": "others/maxplus2/74181.bsf"
+  },
+  {
+   "name": "74182",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74182.bsf"
+  },
+  {
+   "name": "74183",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 128,
+   "rel": "others/maxplus2/74183.bsf"
+  },
+  {
+   "name": "74183o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 80,
+   "rel": "others/maxplus2/74183o.bsf"
+  },
+  {
+   "name": "74184",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74184.bsf"
+  },
+  {
+   "name": "74185",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74185.bsf"
+  },
+  {
+   "name": "74190",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74190.bsf"
+  },
+  {
+   "name": "74191",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74191.bsf"
+  },
+  {
+   "name": "74192",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74192.bsf"
+  },
+  {
+   "name": "74193",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/74193.bsf"
+  },
+  {
+   "name": "74194",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74194.bsf"
+  },
+  {
+   "name": "74195",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74195.bsf"
+  },
+  {
+   "name": "74196",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74196.bsf"
+  },
+  {
+   "name": "74197",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74197.bsf"
+  },
+  {
+   "name": "74198",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 256,
+   "rel": "others/maxplus2/74198.bsf"
+  },
+  {
+   "name": "74199",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 256,
+   "rel": "others/maxplus2/74199.bsf"
+  },
+  {
+   "name": "7420",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 72,
+   "rel": "others/maxplus2/7420.bsf"
+  },
+  {
+   "name": "7421",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 72,
+   "rel": "others/maxplus2/7421.bsf"
+  },
+  {
+   "name": "7423",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/7423.bsf"
+  },
+  {
+   "name": "74240",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74240.bsf"
+  },
+  {
+   "name": "74240b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 96,
+   "rel": "others/maxplus2/74240b.bsf"
+  },
+  {
+   "name": "74240o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/74240o.bsf"
+  },
+  {
+   "name": "74241",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74241.bsf"
+  },
+  {
+   "name": "74241b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 96,
+   "rel": "others/maxplus2/74241b.bsf"
+  },
+  {
+   "name": "74244",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74244.bsf"
+  },
+  {
+   "name": "74244b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 96,
+   "rel": "others/maxplus2/74244b.bsf"
+  },
+  {
+   "name": "74246",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/74246.bsf"
+  },
+  {
+   "name": "74247",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/74247.bsf"
+  },
+  {
+   "name": "74248",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/74248.bsf"
+  },
+  {
+   "name": "7425",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/7425.bsf"
+  },
+  {
+   "name": "74251",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74251.bsf"
+  },
+  {
+   "name": "74253",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74253.bsf"
+  },
+  {
+   "name": "74257",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74257.bsf"
+  },
+  {
+   "name": "74258",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74258.bsf"
+  },
+  {
+   "name": "74259",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74259.bsf"
+  },
+  {
+   "name": "7425o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/7425o.bsf"
+  },
+  {
+   "name": "74260",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74260.bsf"
+  },
+  {
+   "name": "74261",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74261.bsf"
+  },
+  {
+   "name": "74265",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74265.bsf"
+  },
+  {
+   "name": "7427",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/7427.bsf"
+  },
+  {
+   "name": "74273",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74273.bsf"
+  },
+  {
+   "name": "74273b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 144,
+   "h": 80,
+   "rel": "others/maxplus2/74273b.bsf"
+  },
+  {
+   "name": "74276",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 256,
+   "rel": "others/maxplus2/74276.bsf"
+  },
+  {
+   "name": "74276o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 256,
+   "rel": "others/maxplus2/74276o.bsf"
+  },
+  {
+   "name": "74278",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 128,
+   "rel": "others/maxplus2/74278.bsf"
+  },
+  {
+   "name": "74279",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74279.bsf"
+  },
+  {
+   "name": "74279m",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/74279m.bsf"
+  },
+  {
+   "name": "74279md",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 64,
+   "rel": "others/maxplus2/74279md.bsf"
+  },
+  {
+   "name": "7428",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/7428.bsf"
+  },
+  {
+   "name": "74280",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74280.bsf"
+  },
+  {
+   "name": "74280b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 64,
+   "rel": "others/maxplus2/74280b.bsf"
+  },
+  {
+   "name": "74283",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74283.bsf"
+  },
+  {
+   "name": "74284",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74284.bsf"
+  },
+  {
+   "name": "74285",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74285.bsf"
+  },
+  {
+   "name": "74290",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 128,
+   "rel": "others/maxplus2/74290.bsf"
+  },
+  {
+   "name": "74292",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74292.bsf"
+  },
+  {
+   "name": "74293",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/74293.bsf"
+  },
+  {
+   "name": "74294",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/74294.bsf"
+  },
+  {
+   "name": "74295",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/74295.bsf"
+  },
+  {
+   "name": "74297",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 208,
+   "rel": "others/maxplus2/74297.bsf"
+  },
+  {
+   "name": "74298",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74298.bsf"
+  },
+  {
+   "name": "74299",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 192,
+   "rel": "others/maxplus2/74299.bsf"
+  },
+  {
+   "name": "7430",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 136,
+   "rel": "others/maxplus2/7430.bsf"
+  },
+  {
+   "name": "7432",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/7432.bsf"
+  },
+  {
+   "name": "74348",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74348.bsf"
+  },
+  {
+   "name": "74350",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74350.bsf"
+  },
+  {
+   "name": "74352",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74352.bsf"
+  },
+  {
+   "name": "74352o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/74352o.bsf"
+  },
+  {
+   "name": "74353",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74353.bsf"
+  },
+  {
+   "name": "74354",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 288,
+   "rel": "others/maxplus2/74354.bsf"
+  },
+  {
+   "name": "74356",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 288,
+   "rel": "others/maxplus2/74356.bsf"
+  },
+  {
+   "name": "74365",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74365.bsf"
+  },
+  {
+   "name": "74366",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74366.bsf"
+  },
+  {
+   "name": "74367",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74367.bsf"
+  },
+  {
+   "name": "74368",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74368.bsf"
+  },
+  {
+   "name": "7437",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/7437.bsf"
+  },
+  {
+   "name": "74373",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74373.bsf"
+  },
+  {
+   "name": "74373b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 80,
+   "rel": "others/maxplus2/74373b.bsf"
+  },
+  {
+   "name": "74373m",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/74373m.bsf"
+  },
+  {
+   "name": "74374",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74374.bsf"
+  },
+  {
+   "name": "74374b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 80,
+   "rel": "others/maxplus2/74374b.bsf"
+  },
+  {
+   "name": "74374m",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/74374m.bsf"
+  },
+  {
+   "name": "74374nt",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74374nt.bsf"
+  },
+  {
+   "name": "74375",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74375.bsf"
+  },
+  {
+   "name": "74376",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74376.bsf"
+  },
+  {
+   "name": "74377",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74377.bsf"
+  },
+  {
+   "name": "74377b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 80,
+   "rel": "others/maxplus2/74377b.bsf"
+  },
+  {
+   "name": "74378",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74378.bsf"
+  },
+  {
+   "name": "74379",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74379.bsf"
+  },
+  {
+   "name": "74381",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74381.bsf"
+  },
+  {
+   "name": "74382",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74382.bsf"
+  },
+  {
+   "name": "74385",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 256,
+   "rel": "others/maxplus2/74385.bsf"
+  },
+  {
+   "name": "74386",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/74386.bsf"
+  },
+  {
+   "name": "74390",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/74390.bsf"
+  },
+  {
+   "name": "74390o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 96,
+   "rel": "others/maxplus2/74390o.bsf"
+  },
+  {
+   "name": "74393",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74393.bsf"
+  },
+  {
+   "name": "74393m",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/74393m.bsf"
+  },
+  {
+   "name": "74395",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74395.bsf"
+  },
+  {
+   "name": "74396",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/74396.bsf"
+  },
+  {
+   "name": "74398",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74398.bsf"
+  },
+  {
+   "name": "74399",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74399.bsf"
+  },
+  {
+   "name": "7440",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/7440.bsf"
+  },
+  {
+   "name": "7442",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7442.bsf"
+  },
+  {
+   "name": "7443",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7443.bsf"
+  },
+  {
+   "name": "7444",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7444.bsf"
+  },
+  {
+   "name": "74445",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74445.bsf"
+  },
+  {
+   "name": "7445",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7445.bsf"
+  },
+  {
+   "name": "7446",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/7446.bsf"
+  },
+  {
+   "name": "74465",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74465.bsf"
+  },
+  {
+   "name": "74466",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74466.bsf"
+  },
+  {
+   "name": "74467",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74467.bsf"
+  },
+  {
+   "name": "74467o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/74467o.bsf"
+  },
+  {
+   "name": "74468",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74468.bsf"
+  },
+  {
+   "name": "7447",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/7447.bsf"
+  },
+  {
+   "name": "7448",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/7448.bsf"
+  },
+  {
+   "name": "7449",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 144,
+   "rel": "others/maxplus2/7449.bsf"
+  },
+  {
+   "name": "74490",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/74490.bsf"
+  },
+  {
+   "name": "74490o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 96,
+   "rel": "others/maxplus2/74490o.bsf"
+  },
+  {
+   "name": "7450",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/7450.bsf"
+  },
+  {
+   "name": "7451",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/7451.bsf"
+  },
+  {
+   "name": "74518",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 304,
+   "rel": "others/maxplus2/74518.bsf"
+  },
+  {
+   "name": "74518b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 128,
+   "h": 80,
+   "rel": "others/maxplus2/74518b.bsf"
+  },
+  {
+   "name": "7452",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7452.bsf"
+  },
+  {
+   "name": "7453",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/7453.bsf"
+  },
+  {
+   "name": "7454",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/7454.bsf"
+  },
+  {
+   "name": "74540",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74540.bsf"
+  },
+  {
+   "name": "74541",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74541.bsf"
+  },
+  {
+   "name": "74548",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 256,
+   "rel": "others/maxplus2/74548.bsf"
+  },
+  {
+   "name": "74549",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 256,
+   "rel": "others/maxplus2/74549.bsf"
+  },
+  {
+   "name": "7455",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/7455.bsf"
+  },
+  {
+   "name": "7456",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/7456.bsf"
+  },
+  {
+   "name": "74568",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 224,
+   "rel": "others/maxplus2/74568.bsf"
+  },
+  {
+   "name": "74569",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 224,
+   "rel": "others/maxplus2/74569.bsf"
+  },
+  {
+   "name": "7457",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/7457.bsf"
+  },
+  {
+   "name": "74589",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 240,
+   "rel": "others/maxplus2/74589.bsf"
+  },
+  {
+   "name": "74590",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74590.bsf"
+  },
+  {
+   "name": "74592",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74592.bsf"
+  },
+  {
+   "name": "74594",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74594.bsf"
+  },
+  {
+   "name": "74595",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/74595.bsf"
+  },
+  {
+   "name": "74597",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 240,
+   "rel": "others/maxplus2/74597.bsf"
+  },
+  {
+   "name": "74604",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 320,
+   "rel": "others/maxplus2/74604.bsf"
+  },
+  {
+   "name": "74630",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 416,
+   "rel": "others/maxplus2/74630.bsf"
+  },
+  {
+   "name": "74636",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 272,
+   "rel": "others/maxplus2/74636.bsf"
+  },
+  {
+   "name": "7464",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 208,
+   "rel": "others/maxplus2/7464.bsf"
+  },
+  {
+   "name": "74668",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74668.bsf"
+  },
+  {
+   "name": "74669",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/74669.bsf"
+  },
+  {
+   "name": "74670",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 192,
+   "rel": "others/maxplus2/74670.bsf"
+  },
+  {
+   "name": "74671",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 128,
+   "h": 240,
+   "rel": "others/maxplus2/74671.bsf"
+  },
+  {
+   "name": "74672",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 128,
+   "h": 240,
+   "rel": "others/maxplus2/74672.bsf"
+  },
+  {
+   "name": "74673",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 128,
+   "h": 304,
+   "rel": "others/maxplus2/74673.bsf"
+  },
+  {
+   "name": "74674",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 368,
+   "rel": "others/maxplus2/74674.bsf"
+  },
+  {
+   "name": "7468",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/7468.bsf"
+  },
+  {
+   "name": "74684",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 288,
+   "rel": "others/maxplus2/74684.bsf"
+  },
+  {
+   "name": "74686",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 320,
+   "rel": "others/maxplus2/74686.bsf"
+  },
+  {
+   "name": "74688",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 304,
+   "rel": "others/maxplus2/74688.bsf"
+  },
+  {
+   "name": "7469",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 160,
+   "rel": "others/maxplus2/7469.bsf"
+  },
+  {
+   "name": "74690",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74690.bsf"
+  },
+  {
+   "name": "74691",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74691.bsf"
+  },
+  {
+   "name": "74693",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74693.bsf"
+  },
+  {
+   "name": "74696",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74696.bsf"
+  },
+  {
+   "name": "74697",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74697.bsf"
+  },
+  {
+   "name": "74698",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74698.bsf"
+  },
+  {
+   "name": "74699",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74699.bsf"
+  },
+  {
+   "name": "7470",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7470.bsf"
+  },
+  {
+   "name": "7471",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7471.bsf"
+  },
+  {
+   "name": "7472",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7472.bsf"
+  },
+  {
+   "name": "7473",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/7473.bsf"
+  },
+  {
+   "name": "7473a",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/7473a.bsf"
+  },
+  {
+   "name": "7473o",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 96,
+   "rel": "others/maxplus2/7473o.bsf"
+  },
+  {
+   "name": "7474",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/7474.bsf"
+  },
+  {
+   "name": "7475",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/7475.bsf"
+  },
+  {
+   "name": "7476",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7476.bsf"
+  },
+  {
+   "name": "7476a",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7476a.bsf"
+  },
+  {
+   "name": "7477",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 128,
+   "rel": "others/maxplus2/7477.bsf"
+  },
+  {
+   "name": "7478",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/7478.bsf"
+  },
+  {
+   "name": "7478a",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 160,
+   "rel": "others/maxplus2/7478a.bsf"
+  },
+  {
+   "name": "7480",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/7480.bsf"
+  },
+  {
+   "name": "7482",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/7482.bsf"
+  },
+  {
+   "name": "74821",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74821.bsf"
+  },
+  {
+   "name": "74821b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 80,
+   "rel": "others/maxplus2/74821b.bsf"
+  },
+  {
+   "name": "74822",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74822.bsf"
+  },
+  {
+   "name": "74822b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 80,
+   "rel": "others/maxplus2/74822b.bsf"
+  },
+  {
+   "name": "74823",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74823.bsf"
+  },
+  {
+   "name": "74823b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 128,
+   "h": 112,
+   "rel": "others/maxplus2/74823b.bsf"
+  },
+  {
+   "name": "74824",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 240,
+   "rel": "others/maxplus2/74824.bsf"
+  },
+  {
+   "name": "74824b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 128,
+   "h": 112,
+   "rel": "others/maxplus2/74824b.bsf"
+  },
+  {
+   "name": "74825",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 256,
+   "rel": "others/maxplus2/74825.bsf"
+  },
+  {
+   "name": "74825b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 144,
+   "h": 144,
+   "rel": "others/maxplus2/74825b.bsf"
+  },
+  {
+   "name": "74826",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 256,
+   "rel": "others/maxplus2/74826.bsf"
+  },
+  {
+   "name": "74826b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 144,
+   "h": 144,
+   "rel": "others/maxplus2/74826b.bsf"
+  },
+  {
+   "name": "7483",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7483.bsf"
+  },
+  {
+   "name": "74841",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74841.bsf"
+  },
+  {
+   "name": "74841b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 144,
+   "h": 80,
+   "rel": "others/maxplus2/74841b.bsf"
+  },
+  {
+   "name": "74842",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/74842.bsf"
+  },
+  {
+   "name": "74842b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 144,
+   "h": 80,
+   "rel": "others/maxplus2/74842b.bsf"
+  },
+  {
+   "name": "74843",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 240,
+   "rel": "others/maxplus2/74843.bsf"
+  },
+  {
+   "name": "74844",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 240,
+   "rel": "others/maxplus2/74844.bsf"
+  },
+  {
+   "name": "74845",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 256,
+   "rel": "others/maxplus2/74845.bsf"
+  },
+  {
+   "name": "74846",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 256,
+   "rel": "others/maxplus2/74846.bsf"
+  },
+  {
+   "name": "7485",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 208,
+   "rel": "others/maxplus2/7485.bsf"
+  },
+  {
+   "name": "7486",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/7486.bsf"
+  },
+  {
+   "name": "7487",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 128,
+   "rel": "others/maxplus2/7487.bsf"
+  },
+  {
+   "name": "7490",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 128,
+   "rel": "others/maxplus2/7490.bsf"
+  },
+  {
+   "name": "7491",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 104,
+   "rel": "others/maxplus2/7491.bsf"
+  },
+  {
+   "name": "7492",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/7492.bsf"
+  },
+  {
+   "name": "7493",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 112,
+   "rel": "others/maxplus2/7493.bsf"
+  },
+  {
+   "name": "7494",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 240,
+   "rel": "others/maxplus2/7494.bsf"
+  },
+  {
+   "name": "7495",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/7495.bsf"
+  },
+  {
+   "name": "7496",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/7496.bsf"
+  },
+  {
+   "name": "7497",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 208,
+   "rel": "others/maxplus2/7497.bsf"
+  },
+  {
+   "name": "7498",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/7498.bsf"
+  },
+  {
+   "name": "7499",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/7499.bsf"
+  },
+  {
+   "name": "74990",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 192,
+   "rel": "others/maxplus2/74990.bsf"
+  },
+  {
+   "name": "81mux",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 224,
+   "rel": "others/maxplus2/81mux.bsf"
+  },
+  {
+   "name": "8count",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 256,
+   "rel": "others/maxplus2/8count.bsf"
+  },
+  {
+   "name": "8dff",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 224,
+   "rel": "others/maxplus2/8dff.bsf"
+  },
+  {
+   "name": "8dffe",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 224,
+   "rel": "others/maxplus2/8dffe.bsf"
+  },
+  {
+   "name": "8fadd",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 304,
+   "rel": "others/maxplus2/8fadd.bsf"
+  },
+  {
+   "name": "8faddb",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 144,
+   "h": 80,
+   "rel": "others/maxplus2/8faddb.bsf"
+  },
+  {
+   "name": "8mcomp",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 288,
+   "rel": "others/maxplus2/8mcomp.bsf"
+  },
+  {
+   "name": "8mcompb",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 136,
+   "h": 96,
+   "rel": "others/maxplus2/8mcompb.bsf"
+  },
+  {
+   "name": "and5",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/and5.bsf"
+  },
+  {
+   "name": "and7",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/and7.bsf"
+  },
+  {
+   "name": "and9",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/and9.bsf"
+  },
+  {
+   "name": "band5",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/band5.bsf"
+  },
+  {
+   "name": "barrelst",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 240,
+   "rel": "others/maxplus2/barrelst.bsf"
+  },
+  {
+   "name": "barrlstb",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 128,
+   "h": 128,
+   "rel": "others/maxplus2/barrlstb.bsf"
+  },
+  {
+   "name": "bnand5",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/bnand5.bsf"
+  },
+  {
+   "name": "bnor5",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/bnor5.bsf"
+  },
+  {
+   "name": "bnor7",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/bnor7.bsf"
+  },
+  {
+   "name": "bnor9",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/bnor9.bsf"
+  },
+  {
+   "name": "bor13",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 240,
+   "rel": "others/maxplus2/bor13.bsf"
+  },
+  {
+   "name": "bor5",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/bor5.bsf"
+  },
+  {
+   "name": "bor7",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/bor7.bsf"
+  },
+  {
+   "name": "bor9",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/bor9.bsf"
+  },
+  {
+   "name": "btri",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 64,
+   "rel": "others/maxplus2/btri.bsf"
+  },
+  {
+   "name": "cbuf",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 48,
+   "rel": "others/maxplus2/cbuf.bsf"
+  },
+  {
+   "name": "dand2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 64,
+   "rel": "others/maxplus2/dand2.bsf"
+  },
+  {
+   "name": "dand3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/dand3.bsf"
+  },
+  {
+   "name": "dand4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/dand4.bsf"
+  },
+  {
+   "name": "dand8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/dand8.bsf"
+  },
+  {
+   "name": "dec38",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/dec38.bsf"
+  },
+  {
+   "name": "dff2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/dff2.bsf"
+  },
+  {
+   "name": "dor2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 64,
+   "rel": "others/maxplus2/dor2.bsf"
+  },
+  {
+   "name": "dor3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/dor3.bsf"
+  },
+  {
+   "name": "dor4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/dor4.bsf"
+  },
+  {
+   "name": "dor8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/dor8.bsf"
+  },
+  {
+   "name": "dxor2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 64,
+   "rel": "others/maxplus2/dxor2.bsf"
+  },
+  {
+   "name": "dxor3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/dxor3.bsf"
+  },
+  {
+   "name": "dxor4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/dxor4.bsf"
+  },
+  {
+   "name": "dxor8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/dxor8.bsf"
+  },
+  {
+   "name": "enadff",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 80,
+   "rel": "others/maxplus2/enadff.bsf"
+  },
+  {
+   "name": "expdff",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 80,
+   "rel": "others/maxplus2/expdff.bsf"
+  },
+  {
+   "name": "explatch",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 80,
+   "rel": "others/maxplus2/explatch.bsf"
+  },
+  {
+   "name": "freqdiv",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 112,
+   "rel": "others/maxplus2/freqdiv.bsf"
+  },
+  {
+   "name": "gray4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 112,
+   "rel": "others/maxplus2/gray4.bsf"
+  },
+  {
+   "name": "inhb",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 64,
+   "h": 40,
+   "rel": "others/maxplus2/inhb.bsf"
+  },
+  {
+   "name": "inpltch",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 64,
+   "rel": "others/maxplus2/inpltch.bsf"
+  },
+  {
+   "name": "jkff2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/jkff2.bsf"
+  },
+  {
+   "name": "jkffre",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/jkffre.bsf"
+  },
+  {
+   "name": "ltch_p_c",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/ltch_p_c.bsf"
+  },
+  {
+   "name": "mlatch",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/mlatch.bsf"
+  },
+  {
+   "name": "mult2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 144,
+   "rel": "others/maxplus2/mult2.bsf"
+  },
+  {
+   "name": "mult24",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 176,
+   "rel": "others/maxplus2/mult24.bsf"
+  },
+  {
+   "name": "mult4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 208,
+   "rel": "others/maxplus2/mult4.bsf"
+  },
+  {
+   "name": "mult4b",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 112,
+   "h": 80,
+   "rel": "others/maxplus2/mult4b.bsf"
+  },
+  {
+   "name": "mux41",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/mux41.bsf"
+  },
+  {
+   "name": "nand13",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 240,
+   "rel": "others/maxplus2/nand13.bsf"
+  },
+  {
+   "name": "nand5",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/nand5.bsf"
+  },
+  {
+   "name": "nand7",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/nand7.bsf"
+  },
+  {
+   "name": "nand9",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/nand9.bsf"
+  },
+  {
+   "name": "nandltch",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 64,
+   "rel": "others/maxplus2/nandltch.bsf"
+  },
+  {
+   "name": "nor16",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 288,
+   "rel": "others/maxplus2/nor16.bsf"
+  },
+  {
+   "name": "nor5",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/nor5.bsf"
+  },
+  {
+   "name": "norltch",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 64,
+   "rel": "others/maxplus2/norltch.bsf"
+  },
+  {
+   "name": "or5",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/or5.bsf"
+  },
+  {
+   "name": "rdlatch",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/rdlatch.bsf"
+  },
+  {
+   "name": "tand2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/tand2.bsf"
+  },
+  {
+   "name": "tand3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/tand3.bsf"
+  },
+  {
+   "name": "tand4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/tand4.bsf"
+  },
+  {
+   "name": "tand8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/tand8.bsf"
+  },
+  {
+   "name": "tbor13",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 256,
+   "rel": "others/maxplus2/tbor13.bsf"
+  },
+  {
+   "name": "tmult4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 224,
+   "rel": "others/maxplus2/tmult4.bsf"
+  },
+  {
+   "name": "tnand13",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 256,
+   "rel": "others/maxplus2/tnand13.bsf"
+  },
+  {
+   "name": "tnand2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/tnand2.bsf"
+  },
+  {
+   "name": "tnand3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/tnand3.bsf"
+  },
+  {
+   "name": "tnand4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/tnand4.bsf"
+  },
+  {
+   "name": "tnand8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/tnand8.bsf"
+  },
+  {
+   "name": "tnor2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/tnor2.bsf"
+  },
+  {
+   "name": "tnor3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/tnor3.bsf"
+  },
+  {
+   "name": "tnor4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/tnor4.bsf"
+  },
+  {
+   "name": "tnor8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/tnor8.bsf"
+  },
+  {
+   "name": "tor2",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/tor2.bsf"
+  },
+  {
+   "name": "tor3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/tor3.bsf"
+  },
+  {
+   "name": "tor4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 112,
+   "rel": "others/maxplus2/tor4.bsf"
+  },
+  {
+   "name": "tor8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 176,
+   "rel": "others/maxplus2/tor8.bsf"
+  },
+  {
+   "name": "tribuf",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 64,
+   "rel": "others/maxplus2/tribuf.bsf"
+  },
+  {
+   "name": "trinot",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 64,
+   "rel": "others/maxplus2/trinot.bsf"
+  },
+  {
+   "name": "udfdl",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/udfdl.bsf"
+  },
+  {
+   "name": "ujkff",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 144,
+   "rel": "others/maxplus2/ujkff.bsf"
+  },
+  {
+   "name": "unicnt",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 120,
+   "h": 240,
+   "rel": "others/maxplus2/unicnt.bsf"
+  },
+  {
+   "name": "xnor3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/xnor3.bsf"
+  },
+  {
+   "name": "xnor4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/xnor4.bsf"
+  },
+  {
+   "name": "xnor8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/xnor8.bsf"
+  },
+  {
+   "name": "xor3",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 80,
+   "rel": "others/maxplus2/xor3.bsf"
+  },
+  {
+   "name": "xor4",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 96,
+   "rel": "others/maxplus2/xor4.bsf"
+  },
+  {
+   "name": "xor8",
+   "lib": "others/maxplus2",
+   "cat": "74 系列 / 经典器件",
+   "w": 104,
+   "h": 160,
+   "rel": "others/maxplus2/xor8.bsf"
+  },
+  {
+   "name": "ocp_timeout_indicator",
+   "lib": "others/opencore_plus",
+   "cat": "其他器件",
+   "w": 112,
+   "h": 96,
+   "rel": "others/opencore_plus/ocp_timeout_indicator.bsf"
+  },
+  {
+   "name": "gnd",
+   "lib": "primitives/other",
+   "cat": "其他基本单元",
+   "w": 32,
+   "h": 32,
+   "rel": "primitives/other/gnd.bsf"
+  },
+  {
+   "name": "vcc",
+   "lib": "primitives/other",
+   "cat": "其他基本单元",
+   "w": 32,
+   "h": 16,
+   "rel": "primitives/other/vcc.bsf"
+  },
+  {
+   "name": "alt_bidir_buf",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 48,
+   "rel": "primitives/buffer/alt_bidir_buf.bsf"
+  },
+  {
+   "name": "alt_bidir_diff",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 48,
+   "rel": "primitives/buffer/alt_bidir_diff.bsf"
+  },
+  {
+   "name": "alt_inbuf",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/alt_inbuf.bsf"
+  },
+  {
+   "name": "alt_inbuf_diff",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 48,
+   "rel": "primitives/buffer/alt_inbuf_diff.bsf"
+  },
+  {
+   "name": "alt_iobuf",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 48,
+   "rel": "primitives/buffer/alt_iobuf.bsf"
+  },
+  {
+   "name": "alt_iobuf_diff",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 56,
+   "h": 64,
+   "rel": "primitives/buffer/alt_iobuf_diff.bsf"
+  },
+  {
+   "name": "alt_outbuf",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/alt_outbuf.bsf"
+  },
+  {
+   "name": "alt_outbuf_diff",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 48,
+   "rel": "primitives/buffer/alt_outbuf_diff.bsf"
+  },
+  {
+   "name": "alt_outbuf_tri",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/alt_outbuf_tri.bsf"
+  },
+  {
+   "name": "alt_outbuf_tri_diff",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 48,
+   "rel": "primitives/buffer/alt_outbuf_tri_diff.bsf"
+  },
+  {
+   "name": "carry",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/carry.bsf"
+  },
+  {
+   "name": "carry_sum",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 104,
+   "h": 64,
+   "rel": "primitives/buffer/carry_sum.bsf"
+  },
+  {
+   "name": "cascade",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 56,
+   "h": 32,
+   "rel": "primitives/buffer/cascade.bsf"
+  },
+  {
+   "name": "clklock",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 80,
+   "h": 56,
+   "rel": "primitives/buffer/clklock.bsf"
+  },
+  {
+   "name": "exp",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/exp.bsf"
+  },
+  {
+   "name": "global",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/global.bsf"
+  },
+  {
+   "name": "lcell",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/lcell.bsf"
+  },
+  {
+   "name": "opndrn",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/opndrn.bsf"
+  },
+  {
+   "name": "row_global",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/row_global.bsf"
+  },
+  {
+   "name": "soft",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/soft.bsf"
+  },
+  {
+   "name": "tri",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/tri.bsf"
+  },
+  {
+   "name": "wire",
+   "lib": "primitives/buffer",
+   "cat": "缓冲/驱动器",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/buffer/wire.bsf"
+  },
+  {
+   "name": "dff",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/storage/dff.bsf"
+  },
+  {
+   "name": "dffe",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/storage/dffe.bsf"
+  },
+  {
+   "name": "dffea",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 120,
+   "rel": "primitives/storage/dffea.bsf"
+  },
+  {
+   "name": "dffeas",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 72,
+   "h": 152,
+   "rel": "primitives/storage/dffeas.bsf"
+  },
+  {
+   "name": "dlatch",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 72,
+   "h": 80,
+   "rel": "primitives/storage/dlatch.bsf"
+  },
+  {
+   "name": "jkff",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/storage/jkff.bsf"
+  },
+  {
+   "name": "jkffe",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 96,
+   "rel": "primitives/storage/jkffe.bsf"
+  },
+  {
+   "name": "latch",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/storage/latch.bsf"
+  },
+  {
+   "name": "srff",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/storage/srff.bsf"
+  },
+  {
+   "name": "srffe",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 96,
+   "rel": "primitives/storage/srffe.bsf"
+  },
+  {
+   "name": "tff",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/storage/tff.bsf"
+  },
+  {
+   "name": "tffe",
+   "lib": "primitives/storage",
+   "cat": "触发器",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/storage/tffe.bsf"
+  },
+  {
+   "name": "bidir",
+   "lib": "primitives/pin",
+   "cat": "输入输出引脚",
+   "w": 176,
+   "h": 16,
+   "rel": "primitives/pin/bidir.bsf"
+  },
+  {
+   "name": "input",
+   "lib": "primitives/pin",
+   "cat": "输入输出引脚",
+   "w": 168,
+   "h": 16,
+   "rel": "primitives/pin/input.bsf"
+  },
+  {
+   "name": "output",
+   "lib": "primitives/pin",
+   "cat": "输入输出引脚",
+   "w": 176,
+   "h": 16,
+   "rel": "primitives/pin/output.bsf"
+  },
+  {
+   "name": "and12",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 208,
+   "rel": "primitives/logic/and12.bsf"
+  },
+  {
+   "name": "and2",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/and2.bsf"
+  },
+  {
+   "name": "and3",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/and3.bsf"
+  },
+  {
+   "name": "and4",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/logic/and4.bsf"
+  },
+  {
+   "name": "and6",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 112,
+   "rel": "primitives/logic/and6.bsf"
+  },
+  {
+   "name": "and8",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 144,
+   "rel": "primitives/logic/and8.bsf"
+  },
+  {
+   "name": "band12",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 208,
+   "rel": "primitives/logic/band12.bsf"
+  },
+  {
+   "name": "band2",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/band2.bsf"
+  },
+  {
+   "name": "band3",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/band3.bsf"
+  },
+  {
+   "name": "band4",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/logic/band4.bsf"
+  },
+  {
+   "name": "band6",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 112,
+   "rel": "primitives/logic/band6.bsf"
+  },
+  {
+   "name": "band8",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 144,
+   "rel": "primitives/logic/band8.bsf"
+  },
+  {
+   "name": "bnand12",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 208,
+   "rel": "primitives/logic/bnand12.bsf"
+  },
+  {
+   "name": "bnand2",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/bnand2.bsf"
+  },
+  {
+   "name": "bnand3",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/bnand3.bsf"
+  },
+  {
+   "name": "bnand4",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/logic/bnand4.bsf"
+  },
+  {
+   "name": "bnand6",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 112,
+   "rel": "primitives/logic/bnand6.bsf"
+  },
+  {
+   "name": "bnand8",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 144,
+   "rel": "primitives/logic/bnand8.bsf"
+  },
+  {
+   "name": "bnor12",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 208,
+   "rel": "primitives/logic/bnor12.bsf"
+  },
+  {
+   "name": "bnor2",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/bnor2.bsf"
+  },
+  {
+   "name": "bnor3",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/bnor3.bsf"
+  },
+  {
+   "name": "bnor4",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/logic/bnor4.bsf"
+  },
+  {
+   "name": "bnor6",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 112,
+   "rel": "primitives/logic/bnor6.bsf"
+  },
+  {
+   "name": "bnor8",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 144,
+   "rel": "primitives/logic/bnor8.bsf"
+  },
+  {
+   "name": "bor12",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 208,
+   "rel": "primitives/logic/bor12.bsf"
+  },
+  {
+   "name": "bor2",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/bor2.bsf"
+  },
+  {
+   "name": "bor3",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/bor3.bsf"
+  },
+  {
+   "name": "bor4",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/logic/bor4.bsf"
+  },
+  {
+   "name": "bor6",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 112,
+   "rel": "primitives/logic/bor6.bsf"
+  },
+  {
+   "name": "bor8",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 144,
+   "rel": "primitives/logic/bor8.bsf"
+  },
+  {
+   "name": "nand12",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 208,
+   "rel": "primitives/logic/nand12.bsf"
+  },
+  {
+   "name": "nand2",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/nand2.bsf"
+  },
+  {
+   "name": "nand3",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/nand3.bsf"
+  },
+  {
+   "name": "nand4",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/logic/nand4.bsf"
+  },
+  {
+   "name": "nand6",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 112,
+   "rel": "primitives/logic/nand6.bsf"
+  },
+  {
+   "name": "nand8",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 144,
+   "rel": "primitives/logic/nand8.bsf"
+  },
+  {
+   "name": "nor12",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 208,
+   "rel": "primitives/logic/nor12.bsf"
+  },
+  {
+   "name": "nor2",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/nor2.bsf"
+  },
+  {
+   "name": "nor3",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/nor3.bsf"
+  },
+  {
+   "name": "nor4",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/logic/nor4.bsf"
+  },
+  {
+   "name": "nor6",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 112,
+   "rel": "primitives/logic/nor6.bsf"
+  },
+  {
+   "name": "nor8",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 144,
+   "rel": "primitives/logic/nor8.bsf"
+  },
+  {
+   "name": "not",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 48,
+   "h": 32,
+   "rel": "primitives/logic/not.bsf"
+  },
+  {
+   "name": "or12",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 208,
+   "rel": "primitives/logic/or12.bsf"
+  },
+  {
+   "name": "or2",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/or2.bsf"
+  },
+  {
+   "name": "or3",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/or3.bsf"
+  },
+  {
+   "name": "or4",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 80,
+   "rel": "primitives/logic/or4.bsf"
+  },
+  {
+   "name": "or6",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 112,
+   "rel": "primitives/logic/or6.bsf"
+  },
+  {
+   "name": "or8",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 144,
+   "rel": "primitives/logic/or8.bsf"
+  },
+  {
+   "name": "xnor",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/xnor.bsf"
+  },
+  {
+   "name": "xor",
+   "lib": "primitives/logic",
+   "cat": "门电路",
+   "w": 64,
+   "h": 48,
+   "rel": "primitives/logic/xor.bsf"
+  }
+ ]
+}

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quartus 原理图批量生成器 · 安装与使用教程</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --panel:#ffffff; --ink:#161a26; --sub:#5b6478;
+    --line:#e6e9f2; --blue:#2f6fed; --violet:#7c5cff; --green:#12a36b;
+    --amber:#c07a15; --radius:16px;
+    --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink); line-height:1.75;
+    font-family:"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code,kbd,pre{font-family:"Cascadia Mono","Consolas","Courier New",monospace}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; overflow:hidden; color:#fff;
+    background:linear-gradient(135deg,#1b2a5e 0%,#2f6fed 55%,#7c5cff 100%);
+  }
+  .hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+    background-size:34px 34px;
+    mask-image:radial-gradient(circle at 70% 20%,#000 0%,transparent 72%);
+    -webkit-mask-image:radial-gradient(circle at 70% 20%,#000 0%,transparent 72%);
+  }
+  .hero .wrap{position:relative;z-index:1;padding-top:64px;padding-bottom:64px}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28);
+    padding:6px 14px;border-radius:999px;font-size:13px;letter-spacing:.3px;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:#5ff0b0;box-shadow:0 0 0 4px rgba(95,240,176,.18)}
+  h1{font-size:clamp(26px,4.2vw,42px);line-height:1.25;margin:18px 0 10px;letter-spacing:-.5px}
+  .lead{font-size:clamp(15px,1.7vw,18px);color:#dbe4ff;max-width:640px;margin:0}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:12px;
+    font-weight:600;font-size:15px;border:1px solid transparent;transition:.18s;
+  }
+  .btn-main{background:#fff;color:#1b2a5e;box-shadow:0 6px 18px rgba(0,0,0,.16)}
+  .btn-main:hover{transform:translateY(-2px);text-decoration:none}
+  .btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.4)}
+  .btn-ghost:hover{background:rgba(255,255,255,.2);text-decoration:none}
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:56px 0}
+  .kicker{
+    font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;
+    color:var(--blue);
+  }
+  h2{font-size:clamp(21px,2.6vw,28px);margin:8px 0 6px;letter-spacing:-.3px}
+  .sub{color:var(--sub);margin:0 0 26px;font-size:15px}
+
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);
+  }
+
+  /* ---------- 三张特性卡 ---------- */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .feat{padding:22px}
+  .feat .ico{
+    width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#eaf0ff,#f3efff);color:var(--blue);margin-bottom:12px;
+  }
+  .feat h3{margin:0 0 4px;font-size:16px}
+  .feat p{margin:0;color:var(--sub);font-size:14px;line-height:1.7}
+
+  /* ---------- 系统要求表 ---------- */
+  table{width:100%;border-collapse:collapse;font-size:14.5px;overflow:hidden;border-radius:12px}
+  th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#f8faff;font-weight:600;color:#33415c;font-size:13.5px}
+  tr:last-child td{border-bottom:0}
+  .tag{
+    display:inline-block;padding:2px 9px;border-radius:999px;font-size:12.5px;font-weight:600;
+    background:#e9f7f0;color:var(--green);
+  }
+  .tag.opt{background:#fdf4e5;color:var(--amber)}
+
+  /* ---------- 安装步骤 ---------- */
+  .step{
+    display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px;
+    margin-bottom:16px;position:relative;
+  }
+  .num{
+    width:44px;height:44px;border-radius:14px;display:grid;place-items:center;
+    font-weight:800;font-size:18px;color:#fff;
+    background:linear-gradient(135deg,var(--blue),var(--violet));
+    box-shadow:0 6px 16px rgba(47,111,237,.28);
+  }
+  .step h3{margin:2px 0 8px;font-size:17px}
+  .step p{margin:0 0 10px;color:#394257;font-size:14.8px}
+  .step p:last-child{margin-bottom:0}
+  .path{
+    display:inline-block;background:#f3f5fb;border:1px solid var(--line);border-radius:8px;
+    padding:2px 9px;font-size:13.5px;color:#2b3550;
+  }
+  .note{
+    border-left:3px solid var(--blue);background:#f7faff;
+    padding:10px 14px;border-radius:0 8px 8px 0;font-size:14px;color:#3a4a6b;margin-top:12px;
+  }
+  .note.warn{border-color:#e0a33a;background:#fffaf0;color:#7a5a18}
+  .note.ok{border-color:var(--green);background:#f4fbf7;color:#1c6b4a}
+
+  /* ---------- 文件树 ---------- */
+  pre.tree{
+    background:#131a2b;color:#c9d4ee;border-radius:14px;padding:20px 22px;
+    font-size:13px;line-height:1.85;overflow:auto;margin:0;border:1px solid #232e47;
+  }
+  pre.tree .c{color:#6f7d9c}
+  pre.tree .h{color:#7fe3b0}
+
+  /* ---------- FAQ ---------- */
+  details{
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:0 18px;margin-bottom:10px;box-shadow:var(--shadow);
+  }
+  details[open]{border-color:#cad8ff}
+  summary{
+    cursor:pointer;padding:15px 0;font-weight:600;font-size:15px;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--blue);font-weight:700;font-size:19px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details .ans{padding:0 0 16px;color:#414b62;font-size:14.6px}
+  details .ans p{margin:0 0 8px}
+  details .ans ul{margin:6px 0 0;padding-left:20px}
+  details .ans li{margin-bottom:4px}
+
+  kbd{
+    background:#eef1f8;border:1px solid #d7dced;border-bottom-width:2px;
+    border-radius:6px;padding:1px 7px;font-size:12.5px;color:#2b3550;
+  }
+  .inline-code{background:#f1f3fa;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:13.5px}
+
+  footer{padding:40px 0 60px;color:#8a92a6;font-size:13.5px;text-align:center}
+
+  @media (max-width:760px){
+    .grid3{grid-template-columns:1fr}
+    .hero .wrap{padding-top:44px;padding-bottom:48px}
+    .step{grid-template-columns:1fr;padding:20px}
+    .num{margin-bottom:6px}
+    section{padding:40px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= Hero ================= -->
+<div class="hero">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span> v1.1 · 自带安装程序 · 无需联网</span>
+    <h1>Quartus 原理图批量生成器<br>安装与使用教程</h1>
+    <p class="lead">
+      在网页上勾选元件、填数量和引脚名，一键生成 Quartus II 的 <b>.bdf</b> 原理图工程，
+      并直接在 Quartus 里打开。所有逻辑在本地运行，不连网、不上传任何文件。
+    </p>
+    <div class="cta">
+      <a class="btn btn-main" href="#install">开始安装（3 步）</a>
+      <a class="btn btn-ghost" href="#faq">遇到问题？看常见问题</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 特性 ================= -->
+<section>
+  <div class="wrap">
+    <div class="kicker">它能做什么</div>
+    <h2>把「摆元件、连引脚」变成点几下鼠标</h2>
+    <p class="sub">Quartus II 的 Block Editor 里一个个拖元件很费时间，这个插件把这步自动化了。</p>
+    <div class="grid3">
+      <div class="card feat">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+          </svg>
+        </div>
+        <h3>元件库直接调用</h3>
+        <p>内置 Quartus 自带库索引，7490、74LS、门电路等符号随搜随用，引脚坐标自动对齐栅格。</p>
+      </div>
+      <div class="card feat">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 17V7M4 12h9M13 7v10M17 17V9l4-2"/><circle cx="9" cy="12" r="1.6"/>
+          </svg>
+        </div>
+        <h3>现成模板</h3>
+        <p>模 24 / 模 60 / 模 100 计数器、分频器、数码管译码等常用电路，选模板即可生成完整工程。</p>
+      </div>
+      <div class="card feat">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 16l4-6 3 3 4-7 3 5"/><path d="M3 21h18"/>
+          </svg>
+        </div>
+        <h3>流程图预览</h3>
+        <p>生成前先看预览：元件编号、引脚方向、连线是否打结，确认无误再写文件，不覆盖旧工程。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 系统要求 ================= -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">装之前先确认</div>
+    <h2>系统要求</h2>
+    <p class="sub">95% 的电脑都满足，只是确认一下不会被卡住。</p>
+    <div class="card" style="overflow:hidden">
+      <table>
+        <thead><tr><th style="width:34%">项目</th><th style="width:22%">要求</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>操作系统</td><td>Windows 7 / 10 / 11</td><td>插件用 Win32 接口唤起 Quartus，仅支持 Windows。</td></tr>
+          <tr><td>Python</td><td><span class="tag">必需</span> 3.8 及以上</td><td>安装时务必勾选 <b>Add python.exe to PATH</b>；插件零第三方依赖。</td></tr>
+          <tr><td>Quartus II</td><td><span class="tag">必需</span> 9.1 或更高</td><td>用它的元件库生成符号；安装程序会自动探测路径。</td></tr>
+          <tr><td>浏览器</td><td>Edge / Chrome</td><td>插件界面就是本地网页，双击启动后自动打开。</td></tr>
+          <tr><td>网络</td><td><span class="tag opt">不需要</span></td><td>全部本地运行，断网也能用。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 安装 ================= -->
+<section id="install" style="padding-top:8px">
+  <div class="wrap">
+    <div class="kicker">安装</div>
+    <h2>三步装好，不用改环境变量</h2>
+    <p class="sub">整个文件夹拷到任意位置都能用（建议放 D 盘，路径别太深）。</p>
+
+    <!-- 步骤 1 -->
+    <div class="card step">
+      <div class="num">1</div>
+      <div>
+        <h3>确认已安装 Python</h3>
+        <p>按 <kbd>Win</kbd> + <kbd>R</kbd>，输入 <span class="path">cmd</span> 回车，在黑窗口里执行：</p>
+        <p><span class="path">python --version</span></p>
+        <p>看到 <span class="inline-code">Python 3.x.x</span> 就跳过这一步。若提示「不是内部或外部命令」，说明没装或没加 PATH：</p>
+        <div class="note warn">
+          到 <b>python.org/downloads</b> 下载安装包，第一页底部务必勾选
+          <b>Add python.exe to PATH</b>，装完关掉所有命令行窗口，重新打开再试。
+        </div>
+      </div>
+    </div>
+
+    <!-- 步骤 2 -->
+    <div class="card step">
+      <div class="num">2</div>
+      <div>
+        <h3>双击「安装.bat」</h3>
+        <p>安装程序会自动完成 6 件事：检查 Python → 校验插件文件 → 找到 Quartus →
+        写入配置 → 建桌面快捷方式 → 装好「Quartus 一打开就自动弹出插件」并试启动。</p>
+        <p>如果它没找到 Quartus，会提示你把 <span class="path">…\quartus\bin64\quartus.exe</span>
+        的完整路径粘进去，粘完回车即可。</p>
+        <div class="note">
+          只想体检、不想改动系统？在命令行运行
+          <span class="path">安装.bat --check</span>，它只读不写。
+        </div>
+      </div>
+    </div>
+
+    <!-- 步骤 3 -->
+    <div class="card step">
+      <div class="num">3</div>
+      <div>
+        <h3>双击桌面快捷方式开始用</h3>
+        <p>首次会自动启动本地服务并打开浏览器，地址是
+        <span class="inline-code">http://127.0.0.1:8765/</span>。</p>
+        <p>页面顶部有一个环境状态徽标：绿色表示 Quartus 路径、器件库、输出目录都正常；
+        红色点开可以看到具体哪一项不对。</p>
+        <div class="note ok">
+          装完之后有两种用法，效果一样：<br>
+          ① 直接打开 Quartus —— 插件会自己弹出来（安装时已配好）；<br>
+          ② 双击桌面 <b>Quartus原理图生成器</b>，或文件夹里的 <b>启动插件.bat</b>。
+          插件已在运行时不会重复开服务，只会打开页面。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 使用 ================= -->
+<section style="padding-top:8px">
+  <div class="wrap">
+    <div class="kicker">使用</div>
+    <h2>生成第一张原理图</h2>
+    <p class="sub">从「模板」或「元件清单」两种方式任选其一。</p>
+    <div class="grid3" style="grid-template-columns:1fr 1fr">
+      <div class="card feat">
+        <h3>方式 A · 用模板（最快）</h3>
+        <p>左侧选模板（如「模 24 计数器」）→ 右侧确认引脚名 → 点「生成」→
+        Quartus 自动打开 <span class="inline-code">.bdf</span> 与工程文件。</p>
+      </div>
+      <div class="card feat">
+        <h3>方式 B · 自己搭</h3>
+        <p>搜索框输 <span class="inline-code">7490</span> 加进清单，填数量与引脚名 →
+        先「预览」看排版 → 没问题再「生成」。</p>
+      </div>
+    </div>
+    <div class="note" style="margin-top:16px">
+      生成的工程默认放在「文档\QuartusBatch」，文件名即实体名（只能用英文、数字、下划线）。
+      想换位置：改 <span class="path">app\config.json</span> 里的 <span class="inline-code">output_dir</span>。
+    </div>
+  </div>
+</section>
+
+<!-- ================= 目录结构 ================= -->
+<section style="padding-top:8px">
+  <div class="wrap">
+    <div class="kicker">文件说明</div>
+    <h2>文件夹里都是什么</h2>
+    <p class="sub">只需要记住三个：安装.bat、启动插件.bat、app\config.json。</p>
+<pre class="tree">插件全部\
+├─ <span class="h">安装.bat</span>              <span class="c">← 双击安装（自动探测 Quartus、建快捷方式）</span>
+├─ <span class="h">启动插件.bat</span>          <span class="c">← 日常启动入口</span>
+├─ <span class="h">安装教程.html</span>        <span class="c">← 就是本页，可离线打开</span>
+├─ 卸载.bat              <span class="c">← 清理快捷方式与开机启动</span>
+├─ install.py / launcher.py / uninstall.py
+├─ README.txt            <span class="c">← 纯文本速查</span>
+└─ app\                  <span class="c">← 插件本体（别单独移动里面的文件）</span>
+   ├─ server.py          <span class="c">← 本地网页服务</span>
+   ├─ config.json        <span class="c">← 安装时生成：Quartus 路径 / 端口 / 输出目录</span>
+   ├─ symbols.json       <span class="c">← Quartus 元件库索引</span>
+   ├─ templates.py       <span class="c">← 内置电路模板</span>
+   └─ static\index.html  <span class="c">← 网页界面</span></pre>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" style="padding-top:8px">
+  <div class="wrap">
+    <div class="kicker">常见问题</div>
+    <h2>装不上 / 用不了，先看这里</h2>
+    <p class="sub">按出现频率排序，点标题展开。</p>
+
+    <details open>
+      <summary>双击后黑窗口一闪就没了，网页没打开</summary>
+      <div class="ans">
+        <p>说明启动失败。用命令行看真实报错：</p>
+        <ul>
+          <li>在文件夹地址栏输入 <span class="path">cmd</span> 回车，执行 <span class="path">python launcher.py</span>；</li>
+          <li>或直接执行 <span class="path">python app\server.py</span>，报错会停在窗口里；</li>
+          <li>也可以打开 <span class="path">app\server.log</span> 查看最近一次日志。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>提示「python 不是内部或外部命令」</summary>
+      <div class="ans">
+        <p>Python 没装，或安装时没勾 PATH。两种解法：</p>
+        <ul>
+          <li>重新运行 Python 安装包 → <b>Modify</b> → 勾选 <b>Add Python to environment variables</b>；</li>
+          <li>或手动把 <span class="path">C:\Users\你的用户名\AppData\Local\Programs\Python\Python3xx\</span> 和其下的 <span class="path">Scripts</span> 加进系统 PATH。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>安装时没找到 Quartus</summary>
+      <div class="ans">
+        <p>安装程序会在 C/D/E 盘的 <span class="inline-code">altera*</span>、<span class="inline-code">intelFPGA*</span> 目录里找。装在别处时：</p>
+        <ul>
+          <li>重跑安装，按提示粘贴 <span class="path">…\quartus\bin64\quartus.exe</span> 完整路径；</li>
+          <li>或直接改 <span class="path">app\config.json</span> 的 <span class="inline-code">quartus_exe</span> 与 <span class="inline-code">quartus_lib</span>（后者是 Quartus 根目录下的 <span class="inline-code">libraries</span>）。</li>
+        </ul>
+        <p>注意：即使没配 Quartus，生成 <b>.bdf</b> 文件的功能仍然可用，只是「生成后自动打开」失效。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>环境徽标是红色 / 器件库显示 0 个符号</summary>
+      <div class="ans">
+        <p>点徽标看具体项。通常是 <span class="inline-code">quartus_lib</span> 指向的 <span class="inline-code">libraries</span> 目录不对：</p>
+        <ul>
+          <li>确认该目录下能看到 <span class="inline-code">others\</span>、<span class="inline-code">arithmetic\</span> 等子文件夹；</li>
+          <li>Quartus 9.1 的库在 <span class="path">C:\altera\91\quartus\libraries</span>；较新版本注意区分 <span class="inline-code">bin64</span> 与 <span class="inline-code">bin</span>。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>网页打不开，提示端口被占用</summary>
+      <div class="ans">
+        <p>安装时若发现 8765 被占用，会自动换成 8766 起。手动改也行：改
+        <span class="path">app\config.json</span> 里的 <span class="inline-code">port</span>，然后重启插件。</p>
+        <p>想查是谁占了端口：<span class="path">netstat -ano | findstr 8765</span>，再用任务管理器按 PID 结束。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>点「生成」后 Quartus 没弹出来 / 报窗口找不到</summary>
+      <div class="ans">
+        <p>插件是「唤起已打开的 Quartus 窗口」来打开文件，而不是新开进程。请先手动启动一次 Quartus II，
+        再回网页点生成；如果 Quartus 弹了「是否重新加载」的对话框，点「是」。</p>
+        <p>首次运行 Quartus 若报「Can't connect to the Altera web site」，点确定即可，与插件无关。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>打开 Quartus 时插件没自动弹出来</summary>
+      <div class="ans">
+        <p>自动弹出靠的是「启动」文件夹里的一条监控项，正常安装会自动装好。没弹时可这样排查：</p>
+        <ul>
+          <li>确认装过：重跑一次 <span class="path">安装.bat</span>（它是覆盖安装，不会重复添加）；</li>
+          <li>看日志 <span class="path">app\watcher.log</span>，正常会有「监控启动，等待 Quartus」「已弹出页面」两行；</li>
+          <li>若之前把监控关了：双击 <span class="path">安装.bat</span> 即可恢复；不需要自动弹出就用
+            <span class="path">安装.bat --no-autostart</span>。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>不想要自动弹出，只手动双击打开</summary>
+      <div class="ans">
+        <p>两种办法任选：</p>
+        <ul>
+          <li>重装时加参数：<span class="path">安装.bat --no-autostart</span>；</li>
+          <li>已经装了想撤掉：运行 <span class="path">卸载.bat</span>，它会移除「启动」里的监控项
+            （之后仍可双击「启动插件.bat」手动用）。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>怎么彻底卸载</summary>
+      <div class="ans">
+        <p>双击 <span class="path">卸载.bat</span>：删桌面快捷方式、删开机启动项，可选删配置与日志。
+        已经生成的原理图工程在「文档\QuartusBatch」，不会被动。</p>
+        <p>想彻底清掉，直接把整个「插件全部」文件夹删除即可，插件不写注册表、不装服务。</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Quartus 原理图批量生成器 v1.1 · 本地运行 / 零第三方依赖 / 不联网<br>
+    适用于 Quartus II 9.1 及更高版本 · 建议配合本文件夹内 README.txt 一并保存
+  </div>
+</footer>
+
+</body>
+</html>
