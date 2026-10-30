@@ -64,9 +64,8 @@ def find_quartus():
     cfg_path = os.path.join(APP, "config.json")
     if os.path.exists(cfg_path):
         try:
-            import json
-            with open(cfg_path, encoding="utf-8") as f:
-                cands.append(json.load(f).get("quartus_exe", ""))
+            import config
+            cands.append(config.load()["quartus_exe"])
         except Exception:
             pass
 
@@ -256,7 +255,11 @@ def main():
     if lib:
         cfg["quartus_lib"] = lib
     if not os.path.isdir(cfg["output_dir"]):
-        cfg["output_dir"] = os.path.join(os.path.expanduser("~"), "Documents", "QuartusBatch")
+        try:                                        # 用户自己改过路径就照他的建出来
+            os.makedirs(cfg["output_dir"], exist_ok=True)
+        except OSError:
+            say(WARN + "输出目录 %s 用不了，改用默认的「文档\\QuartusBatch」" % cfg["output_dir"])
+            cfg["output_dir"] = os.path.join(os.path.expanduser("~"), "Documents", "QuartusBatch")
     owner = probe_port(int(cfg["port"]))
     if owner == "other":
         newp = pick_port(int(cfg["port"]))
@@ -316,14 +319,17 @@ def main():
     if ok and not already:
         say(OK + "服务已启动：http://127.0.0.1:%d/" % port)
     elif not ok:
-        say(WARN + "服务启动较慢，稍后双击桌面快捷方式即可")
+        say(WARN + "服务启动较慢，稍后双击「启动插件.bat」即可")
 
     say()
     say("安装完成！")
-    say("  - 打开 Quartus，插件会自动弹出（和以前一样）")
-    say("  - 也可以双击桌面的「Quartus原理图生成器」手动打开")
+    if opt["autostart"]:
+        say("  - 打开 Quartus，插件会自动弹出（和以前一样）")
+    if opt["shortcut"]:
+        say("  - 也可以双击桌面的「Quartus原理图生成器」手动打开")
+    say("  - 手动启动：双击「启动插件.bat」，或访问 http://127.0.0.1:%d/" % int(cfg["port"]))
     say("  - 详细用法见「安装教程.html」")
-    say("  - 想改 Quartus 路径/端口：用记事本打开 app\\config.json")
+    say("  - 想改 Quartus 路径/端口/输出目录：用记事本打开 app\\config.json")
     say()
     try:
         os.startfile(os.path.join(ROOT, "安装教程.html"))

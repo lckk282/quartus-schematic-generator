@@ -26,6 +26,18 @@ DEFAULTS = {
 _cache = None
 
 
+def _read_json(path):
+    """记事本保存的 config.json 可能带 BOM 或是 GBK，两种都试一次。"""
+    last = None
+    for enc in ("utf-8-sig", "gbk"):
+        try:
+            with open(path, encoding=enc) as f:
+                return json.load(f)
+        except Exception as e:  # noqa: BLE001
+            last = e
+    raise last
+
+
 def load(reload=False):
     global _cache
     if _cache is not None and not reload:
@@ -33,8 +45,7 @@ def load(reload=False):
     cfg = dict(DEFAULTS)
     if os.path.exists(CONFIG_PATH):
         try:
-            with open(CONFIG_PATH, encoding="utf-8") as f:
-                cfg.update({k: v for k, v in json.load(f).items() if k in DEFAULTS})
+            cfg.update({k: v for k, v in _read_json(CONFIG_PATH).items() if k in DEFAULTS})
         except Exception as e:  # 配置坏了不能让插件起不来
             print("[config] config.json 读取失败，使用默认值:", e)
     _cache = cfg
