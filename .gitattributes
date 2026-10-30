@@ -1,0 +1,8 @@
+# 统一换行，保证 Windows 上双击 .bat 正常执行
+* text=auto
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.html text eol=crlf
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
